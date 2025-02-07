@@ -1,5 +1,4 @@
 import "./App.css";
-import ProfileImage from "./components/ProfileImage";
 import Tweet from "./components/Tweet";
 
 const tweetsArray = [
@@ -42,7 +41,6 @@ function App() {
   return (
     <div className="App">
       <Tweet tweet={tweetsArray[0]} />
-      <ProfileImage image={IMAGE_URL} />
     </div>
   );
 }
