@@ -7,16 +7,23 @@ import User from "./User";
 function Tweet({ tweet }) {
   return (
     <div className="tweet">
-      
-      <ProfileImage image={tweet.user.image} />
+      <img
+        src={props.tweet.user.image}
+        className="profile"
+        alt="profile"
+      />
 
       <div className="body">
         <div className="top">
-          <User name={tweet.user.name} handle={tweet.user.handle} />
-          <Timestamp time={tweet.timestamp} />
+          <span className="user">
+            <span className="name">{props.tweet.user.name}</span>
+            <span className="handle">{props.tweet.user.handle}</span>
+          </span>
+
+          <span className="timestamp">{props.tweet.timestamp}</span>
         </div>
 
-        <Message message={tweet.message} />
+        <p className="message">{props.tweet.message}</p>
 
         <Actions />
       </div>
